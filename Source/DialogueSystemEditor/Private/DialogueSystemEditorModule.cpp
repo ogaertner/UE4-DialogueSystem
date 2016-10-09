@@ -85,7 +85,7 @@ private:
 
 	void RegisterNotifications()
 	{
-		TSharedRef<IHttpRequest> request = FHttpModule::Get().CreateRequest();
+		/*TSharedRef<IHttpRequest> request = FHttpModule::Get().CreateRequest();
 		FString server = "http://mavrinsoft.ru/GetCurrentVersion.php?";
 		FString app = "DialogueSystem";
 		FString major = "1";
@@ -97,7 +97,7 @@ private:
 		request->SetVerb(TEXT("GET"));
 
 		request->OnProcessRequestComplete().BindRaw(this, &FDialogueSystemEditorModule::CurrentVersion_Response);
-		request->ProcessRequest();
+		request->ProcessRequest();*/
 	}
 
 	void CurrentVersion_Response(FHttpRequestPtr Request, FHttpResponsePtr Response, bool bWasSuccessful)
@@ -130,8 +130,8 @@ private:
 
 	static void OpenSite()
 	{
-		FString TheURL = "http://mavrinsoft.ru";
-		FPlatformProcess::LaunchURL(*TheURL, nullptr, nullptr);
+		/*FString TheURL = "http://mavrinsoft.ru";
+		FPlatformProcess::LaunchURL(*TheURL, nullptr, nullptr);*/
 	}
 };
 
