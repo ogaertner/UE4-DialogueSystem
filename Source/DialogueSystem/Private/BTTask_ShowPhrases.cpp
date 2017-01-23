@@ -139,6 +139,7 @@ EBTNodeResult::Type UBTTask_ShowPhrases::ExecuteTask(UBehaviorTreeComponent& Own
 						{
 							if (DialogueTextOptions.TextEffect == ETextEffect::Typewriter)
 							{
+								bShowingFullPhrase = false;
 								CurrentCharNum = 1; StringToDisplay = "";
 								FullString = StartPhrase.ToString().GetCharArray();
 								StringToDisplay.AppendChar(FullString[0]);

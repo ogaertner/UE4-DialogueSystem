@@ -7,7 +7,7 @@
 
 UBTTask_WaitAnswer* UDialogueEventListener::GetCurrentBrunch()
 {
-	return WaitAnswerNode;
+	return WaitAnswerNode.Get();
 }
 
 TSharedRef<SWidget> UDialogueEventListener::RebuildWidget()

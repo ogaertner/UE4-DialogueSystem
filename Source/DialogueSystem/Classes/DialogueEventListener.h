@@ -18,8 +18,8 @@ class DIALOGUESYSTEM_API UDialogueEventListener : public UWidget
 
 public:
 
-	UBTTask_ShowPhrases* ShowPhrasesNode;
-	UBTTask_WaitAnswer* WaitAnswerNode;
+	TWeakObjectPtr<UBTTask_ShowPhrases> ShowPhrasesNode;
+	TWeakObjectPtr<UBTTask_WaitAnswer> WaitAnswerNode;
 
 	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "DialogueSystem|Dialogue")
 	UBTTask_WaitAnswer* GetCurrentBrunch();

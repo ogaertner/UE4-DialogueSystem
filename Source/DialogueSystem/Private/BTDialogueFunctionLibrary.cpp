@@ -31,7 +31,7 @@ void UBTDialogueFunctionLibrary::SkipCurrentPhrase(UDialogueEventListener* Event
 {
 	if (EventListener != nullptr)
 	{
-		UBTTask_ShowPhrases* Node = EventListener->ShowPhrasesNode;
+		UBTTask_ShowPhrases* Node = EventListener->ShowPhrasesNode.Get();
 		if (Node != nullptr)
 		{
 			Node->OwnerActor->GetWorldTimerManager().ClearTimer(Node->TimerHandle);
